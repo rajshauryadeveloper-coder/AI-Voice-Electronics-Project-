@@ -1,0 +1,6 @@
+#uv pip install -r "requirements.txt"
+python-dotenv
+groq
+fastapi
+uvicorn
+python-multipart
