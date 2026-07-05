@@ -25,8 +25,10 @@ app.add_middleware(
     expose_headers=["X-Transcription", "X-LLM-Response"]  # Expose headers for client reading
 )
 
-TEMP_DIR = "temp_audio"
-OUTPUT_DIR = "output_audio"
+import tempfile
+
+TEMP_DIR = os.path.join(tempfile.gettempdir(), "temp_audio")
+OUTPUT_DIR = os.path.join(tempfile.gettempdir(), "output_audio")
 
 # Ensure directories exist
 os.makedirs(TEMP_DIR, exist_ok=True)
